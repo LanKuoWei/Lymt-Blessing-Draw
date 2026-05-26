@@ -45,18 +45,25 @@
         <section class="screen" id="screen-result">
             <div class="image-wrapper">
                 <!-- 動態背景影片：循環播放、靜音、適應螢幕，並以靜態圖作為 poster 與 fallback -->
-                <video class="bg-img bg-video" id="result-bg-video" loop muted playsinline poster="BlessingDrawResult.png">
-                    <source src="BlessingDrawResult_Animation.mp4" type="video/mp4">
-                    <img src="BlessingDrawResult.png" alt="求籤結果背景" class="bg-img" id="result-bg-img">
+                <video class="bg-img bg-video" id="result-bg-video" loop muted playsinline poster="BlessingDrawResult_1.png">
+                    <source src="BlessingDrawResult_Animation_1.mp4" type="video/mp4">
+                    <img src="BlessingDrawResult_1.png" alt="求籤結果背景" class="bg-img" id="result-bg-img">
                 </video>
                 
-                <!-- 牌匾內祝福語展示區 -->
-                <div class="blessing-board" id="blessing-board">
-                    <div class="blessing-content-wrapper">
-                        <!-- 直書祝福語本文：由右至左、由上至下自動換行，無籤號標題與落款 -->
-                        <div class="blessing-text" id="blessing-text-content">
-                            老和尚祝福你們，要想有智慧、福德、無量壽，這是果喔！因從哪裡來呢？「智慧福德無量壽，悉從精進法中來」，你不精進，這些果就沒有。
-                        </div>
+                <!-- 牌匾內區塊 1 展示區 (淨寶三資糧) -->
+                <div class="blessing-block block-1" id="blessing-block-1">
+                    <div class="block-content" id="block-content-1">信</div>
+                </div>
+
+                <!-- 牌匾內區塊 2 展示區 (招財六度行) -->
+                <div class="blessing-block block-2" id="blessing-block-2">
+                    <div class="block-content" id="block-content-2">布施</div>
+                </div>
+
+                <!-- 牌匾內區塊 3 展示區 (經典祝福法語) -->
+                <div class="blessing-block block-3" id="blessing-block-3">
+                    <div class="block-content" id="block-content-3">
+                        老和尚祝福你們，要想有智慧、福德、無量壽，這是果喔！因從哪裡來呢？「智慧福德無量壽，悉從精進法中來」，你不精進，這些果就沒有。
                     </div>
                 </div>
 
@@ -70,8 +77,8 @@
 
     </main>
 
-    <!-- 載入祝福語資料與主控邏輯 -->
-    <script src="blessings.js"></script>
-    <script src="app.js"></script>
+    <!-- 載入祝福語資料與主控邏輯 (顯式指定 UTF-8 編碼，防止 Windows 本地端載入亂碼) -->
+    <script src="blessings.js" charset="UTF-8"></script>
+    <script src="app.js" charset="UTF-8"></script>
 </body>
 </html>

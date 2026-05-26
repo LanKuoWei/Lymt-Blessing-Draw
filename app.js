@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const drawVideo = document.getElementById("draw-video");
     const resultBgVideo = document.getElementById("result-bg-video");
     
-    const blessingTextContent = document.getElementById("blessing-text-content");
+    const blockContent1 = document.getElementById("block-content-1");
+    const blockContent2 = document.getElementById("block-content-2");
+    const blockContent3 = document.getElementById("block-content-3");
     
     // --------------------------------------------------
     // 音效與狀態變數 (ENABLE_AUDIO 暫不啟用，保留高擴充性結構)
@@ -26,27 +28,54 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentBlessing = "";
     let resultShown = false;
 
-    // 執行隨機抽取法語
+    // 1~2 區塊的資料庫 (定義於此，避免 file:// CORS 跨網域存取限制)
+    const JIN_BAO_WORDS = ["信", "願", "行"];
+    const ZHAO_CAI_WORDS = ["布施", "持戒", "忍辱", "精進", "禪定", "般若"];
+
+    // 將字串中的 Markdown 粗體 **文字** 轉換為 HTML 的 <strong>文字</strong> 標籤 (防 XSS 設計)
+    function formatMarkdownBold(text) {
+        if (!text) return "";
+        const safeText = text
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+        return safeText.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+    }
+
+    // 執行隨機抽取法語與招財、淨寶字組
     function performDraw() {
         if (typeof BLESSINGS === "undefined" || BLESSINGS.length === 0) {
             console.error("無法載入祝福語資料庫！");
             return;
         }
         
+        // 1. 區塊 1 隨機抽取 (淨寶：信、願、行 隨機一個字)
+        const randomJinBao = JIN_BAO_WORDS[Math.floor(Math.random() * JIN_BAO_WORDS.length)];
+        if (blockContent1) blockContent1.textContent = randomJinBao;
+
+        // 2. 區塊 2 隨機抽取 (招財：布施、持戒、忍辱、精進、禪定、般若 隨機一個詞)
+        const randomZhaoCai = ZHAO_CAI_WORDS[Math.floor(Math.random() * ZHAO_CAI_WORDS.length)];
+        if (blockContent2) blockContent2.textContent = randomZhaoCai;
+
+        // 3. 區塊 3 隨機抽取 (舊有 blessings.js 祝福語)
         const randomIndex = Math.floor(Math.random() * BLESSINGS.length);
         currentBlessing = BLESSINGS[randomIndex];
         
-        // 直接渲染直書祝福語本文
-        blessingTextContent.textContent = currentBlessing;
-        
-        // 清除先前的字數調節 class
-        blessingTextContent.classList.remove("long-text", "extra-long-text");
-        
-        // 根據字數長短，自動調節字級大小以防破版
-        if (currentBlessing.length > 55) {
-            blessingTextContent.classList.add("extra-long-text");
-        } else if (currentBlessing.length > 35) {
-            blessingTextContent.classList.add("long-text");
+        if (blockContent3) {
+            // 使用 innerHTML 寫入格式化後的粗體 HTML，而非 textContent，解決 markdown 星號字元顯示問題
+            blockContent3.innerHTML = formatMarkdownBold(currentBlessing);
+            
+            // 清除先前的字數調節 class
+            blockContent3.classList.remove("long-text", "extra-long-text");
+            
+            // 根據字數長短，自動調節字級大小以防破版
+            if (currentBlessing.length > 55) {
+                blockContent3.classList.add("extra-long-text");
+            } else if (currentBlessing.length > 35) {
+                blockContent3.classList.add("long-text");
+            }
         }
     }
 

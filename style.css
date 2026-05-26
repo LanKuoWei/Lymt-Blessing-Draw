@@ -269,64 +269,121 @@ body, html {
 /* --------------------------------------------------
    2. 求籤結果與直書排版 (Result Screen)
 -------------------------------------------------- */
-/* 牌匾絕對定位範圍 */
-.blessing-board {
+/* 區塊 1 定位 (淨寶三資糧的左邊) */
+.blessing-block.block-1 {
     position: absolute;
-    left: 14%;
-    top: 13.8%;
-    width: 72%;
-    height: 64.2%;
+    left: 21.0%;  /* 向左平移 3.5%，完美對齊背景圖中標註的 1 區塊正中心 */
+    top: 11.5%;   /* 往上移動，使大字中心完美對齊右方「淨寶三資糧」的中間點 */
+    width: 14%;   /* 加寬容器，防止大字體折行 */
+    height: 15%;  /* 微調高度，與 top 配合達到極致的垂直居中對稱 */
     z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8% 6%;
 }
 
-.blessing-content-wrapper {
-    /* 核心：古典中文直排書寫 */
+/* 區塊 2 定位 (招財六度行的左邊) */
+.blessing-block.block-2 {
+    position: absolute;
+    left: 49.0%;  /* 向左平移 3.5%，完美對齊背景圖中標註的 2 區塊正中心 */
+    top: 11.5%;   /* 往上移動，使大字中心完美對齊右方「招財六度行」的中間點 */
+    width: 14%;   /* 加寬容器，防止大字體折行 */
+    height: 15%;  /* 微調高度，與 top 配合達到極致的垂直居中對稱 */
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 區塊 3 定位 (金色分隔線下方的祝福語大框) */
+.blessing-block.block-3 {
+    position: absolute;
+    left: 14%;
+    top: 33.5%;
+    width: 72%;
+    height: 44.5%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 4%;
+}
+
+/* 直排內容共用樣式 (移除 flexbox 宣告，使其回歸純粹的直排文本流，防止 inline 標籤如 strong 被提升為 Flex Item 導致字元橫向平排) */
+.blessing-block .block-content {
     writing-mode: vertical-rl;
     text-orientation: mixed;
     height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: row; /* 直排下，flex-direction 為橫向流動，從右向左排列 */
-    justify-content: center; /* 內容在主軸上居中 */
-    align-items: center;     /* 內容在交叉軸上居中 */
-}
-
-/* 祝福語文字本文 */
-.blessing-text {
-    font-size: 5.6cqw;
-    font-weight: 600;
-    line-height: 1.85;
     color: var(--color-text-dark);
-    letter-spacing: 0.15em;
-    text-align: justify;
-    text-justify: inter-ideographic;
-    height: 100%; /* 直排高度 100%，由上往下寫到接近框底後自動往左換行 */
-    max-width: 90%;
     text-shadow: 0.5px 0.5px 0px rgba(255, 255, 255, 0.4);
     opacity: 0;
     transform: translateY(-20px);
     transition: opacity 1.2s ease 0.4s, transform 1.2s cubic-bezier(0.25, 1, 0.5, 1) 0.4s;
 }
 
-.screen.active .blessing-text {
+/* 僅針對無標籤之大字區塊 1 與區塊 2 啟用彈性置中，確保極致對稱 */
+.blessing-block.block-1 .block-content,
+.blessing-block.block-2 .block-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen.active .blessing-block .block-content {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* 針對較長字數的祝福語做字型微調 */
-.blessing-text.long-text {
-    font-size: 4.8cqw;
-    line-height: 1.7;
+/* 區塊 1 字體大小 (單字如「信」) */
+#block-content-1 {
+    font-size: 14.5cqw; /* 大幅上調至原本的 1.7 倍，氣勢磅礴且極致醒目 */
+    font-weight: 900;
+    letter-spacing: 0;
+    text-align: center;
 }
 
-/* 針對超長字數的祝福語做字型微調 */
-.blessing-text.extra-long-text {
-    font-size: 4.2cqw;
-    line-height: 1.6;
+/* 區塊 2 字體大小 (雙字如「布施」，直排) */
+#block-content-2 {
+    font-size: 11.5cqw; /* 大幅上調至原本的 1.7 倍，極限貼合雙字直排且高度不溢出 */
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    line-height: 1.1;   /* 緊湊行高，使直書雙字銜接完美 */
+    text-align: center;
+}
+
+/* 區塊 3 字體大小 (長篇祝福語) */
+#block-content-3 {
+    font-size: 7.2cqw;   /* 預設短句字體，再次上調至 7.2cqw，大氣磅礴 */
+    font-weight: 600;
+    line-height: 1.65;   /* 緊湊行高，使直書行與行間結構更沉穩 */
+    letter-spacing: 0.12em;
+    text-align: justify;
+    text-justify: inter-ideographic;
+    
+    /* 核心：寬度設為 fit-content，讓整個直排文字方塊在 Flex 父容器中完美實現水平與垂直雙置中 */
+    width: fit-content;
+    max-width: 100%;
+    height: 100%;
+}
+
+/* 針對較長字數的區塊 3 祝福語做字型微調 */
+#block-content-3.long-text {
+    font-size: 6.0cqw;   /* 再次大幅上調至 6.0cqw */
+    line-height: 1.55;
+}
+
+/* 針對超長字數的區塊 3 祝福語做字型微調 */
+#block-content-3.extra-long-text {
+    font-size: 5.0cqw;   /* 大幅上調至 5.0cqw，極致優化長句的清晰度與視覺份量 */
+    line-height: 1.45;
+}
+
+/* 區塊 3 內部的 Markdown 粗體樣式優化 (蒼勁重黑體) */
+#block-content-3 strong {
+    font-weight: 900;
+    color: #000;         /* 更深邃的特黑古墨色，與常規文字的溫潤墨色形成大氣且沉穩的對比 */
 }
 
 /* 再求一籤按鈕 (紅底金邊，大氣尊貴) */
