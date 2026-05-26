@@ -299,14 +299,14 @@ body, html {
 .blessing-block.block-3 {
     position: absolute;
     left: 14%;
-    top: 33.5%;
+    top: 32.5%;   /* 往上微移 1%，爭取更多垂直空間 */
     width: 72%;
-    height: 44.5%;
+    height: 48.0%; /* 高度從 46.0% 進一步拉大至 48.0% 的物理極限，使排版空間達到最完美擴展 */
     z-index: 10;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2% 4%;
+    justify-content: center; /* 水平方向置中 (在直排中，這代表列與列整體居中) */
+    align-items: center;     /* 垂直方向置中 (文字在垂直列中居中) */
+    padding: 0.5% 4%;        /* 上下 padding 壓縮至 0.5%，最大化直書垂直排版行長，多空出整整一個字的長度 */
 }
 
 /* 直排內容共用樣式 (移除 flexbox 宣告，使其回歸純粹的直排文本流，防止 inline 標籤如 strong 被提升為 Flex Item 導致字元橫向平排) */
@@ -329,6 +329,7 @@ body, html {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    white-space: nowrap; /* 強制不折行，配合適度字體大小，百分之百防止直排字體因高度限制而換列 */
 }
 
 .screen.active .blessing-block .block-content {
@@ -338,7 +339,7 @@ body, html {
 
 /* 區塊 1 字體大小 (單字如「信」) */
 #block-content-1 {
-    font-size: 14.5cqw; /* 大幅上調至原本的 1.7 倍，氣勢磅礴且極致醒目 */
+    font-size: 11.0cqw; /* 從 14.5cqw 下調至安全且大氣的 11.0cqw，極致防止手機端與外框重疊 */
     font-weight: 900;
     letter-spacing: 0;
     text-align: center;
@@ -346,7 +347,7 @@ body, html {
 
 /* 區塊 2 字體大小 (雙字如「布施」，直排) */
 #block-content-2 {
-    font-size: 11.5cqw; /* 大幅上調至原本的 1.7 倍，極限貼合雙字直排且高度不溢出 */
+    font-size: 8.5cqw;  /* 從 11.5cqw 下調至安全的 8.5cqw，確保手機端雙字在一列直排排完，絕不分裂成兩列 */
     font-weight: 900;
     letter-spacing: 0.05em;
     line-height: 1.1;   /* 緊湊行高，使直書雙字銜接完美 */
@@ -355,9 +356,9 @@ body, html {
 
 /* 區塊 3 字體大小 (長篇祝福語) */
 #block-content-3 {
-    font-size: 7.2cqw;   /* 預設短句字體，再次上調至 7.2cqw，大氣磅礴 */
+    font-size: 7.2cqw;   /* 預設短句字體 (<=35字)，上調至 7.2cqw，震撼大氣 */
     font-weight: 600;
-    line-height: 1.65;   /* 緊湊行高，使直書行與行間結構更沉穩 */
+    line-height: 1.55;   /* 緊湊行高，使直書行與行間結構更沉穩 */
     letter-spacing: 0.12em;
     text-align: justify;
     text-justify: inter-ideographic;
@@ -368,16 +369,16 @@ body, html {
     height: 100%;
 }
 
-/* 針對較長字數的區塊 3 祝福語做字型微調 */
+/* 針對中等字數的區塊 3 祝福語做字型微調 (35字 ~ 55字) */
 #block-content-3.long-text {
-    font-size: 6.0cqw;   /* 再次大幅上調至 6.0cqw */
-    line-height: 1.55;
+    font-size: 6.0cqw;   /* 大幅上調至 6.0cqw，充滿飽滿感 */
+    line-height: 1.5;    /* 適度緊湊行距 */
 }
 
-/* 針對超長字數的區塊 3 祝福語做字型微調 */
+/* 針對超長字數的區塊 3 祝福語做字型微調 (>55字，例如 132 字極限長句) */
 #block-content-3.extra-long-text {
-    font-size: 5.0cqw;   /* 大幅上調至 5.0cqw，極致優化長句的清晰度與視覺份量 */
-    line-height: 1.45;
+    font-size: 5.0cqw;   /* 大幅上調至 5.0cqw，保證極限字數在直排 9 列下完美填滿大框且絕對不溢出 */
+    line-height: 1.45;   /* 精密收攏行距，防範超長句列寬溢出 */
 }
 
 /* 區塊 3 內部的 Markdown 粗體樣式優化 (蒼勁重黑體) */

@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // 清除先前的字數調節 class
             blockContent3.classList.remove("long-text", "extra-long-text");
             
-            // 根據字數長短，自動調節字級大小以防破版
+            // 根據字數長短，自動調節字級大小以防破版 (回歸極致穩定的字數硬判定邏輯)
             if (currentBlessing.length > 55) {
                 blockContent3.classList.add("extra-long-text");
             } else if (currentBlessing.length > 35) {
@@ -87,8 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
         performDraw();
 
         // 2. 原地播放搖籤動畫影片：
-        // 將 .animation-video 加上 .active 類別，在 CSS 中使其 opacity 0 -> 1 原地淡入。
-        // 因為影片已在 DOM 中預載 (preload)，所以 currentTime 與 play() 會原地零延遲無縫流暢播放！
         drawVideo.classList.add("active");
         drawVideo.currentTime = 0;
         drawVideo.muted = isMuted;
