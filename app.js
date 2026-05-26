@@ -68,10 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
             blockContent3.innerHTML = formatMarkdownBold(currentBlessing);
             
             // 清除先前的字數調節 class
-            blockContent3.classList.remove("long-text", "extra-long-text");
+            blockContent3.classList.remove("long-text", "extra-long-text", "extra-extra-long-text");
             
-            // 根據字數長短，自動調節字級大小以防破版 (回歸極致穩定的字數硬判定邏輯)
-            if (currentBlessing.length > 55) {
+            // 根據字數長短，自動調節字級大小以防破版 (四層級字數硬判定邏輯，精確至極長篇幅)
+            if (currentBlessing.length > 75) {
+                blockContent3.classList.add("extra-extra-long-text");
+            } else if (currentBlessing.length > 55) {
                 blockContent3.classList.add("extra-long-text");
             } else if (currentBlessing.length > 35) {
                 blockContent3.classList.add("long-text");
