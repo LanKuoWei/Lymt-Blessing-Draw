@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>法之光・心相應 ｜ 佛教祝福語求籤</title>
+    
+    <!-- 載入 Google Fonts 思源宋體 Noto Serif TC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 禪意深色背景與金色星光粒子效果 (PC端外圍) -->
+    <div class="sky-background">
+        <div class="stars"></div>
+        <div class="glowing-orb orb-1"></div>
+        <div class="glowing-orb orb-2"></div>
+    </div>
+
+    <!-- 主求籤容器 (鎖定 1817:3231 直立物理比例) -->
+    <main class="app-container" id="app-container">
+
+        <!-- 1. 首頁與求籤動畫畫面 (同一容器層疊，以實現極致無縫原地淡入) -->
+        <section class="screen active" id="screen-home">
+            <div class="image-wrapper">
+                <!-- 首頁底圖 -->
+                <img src="BlessingDrawPage.png" alt="與佛相應求籤首頁" class="bg-img" id="bg-base-img">
+                
+                <!-- 原地層疊的求籤動畫影片 (預載，預設 opacity: 0 隱藏) -->
+                <video class="animation-video" id="draw-video" preload="auto" playsinline muted>
+                    <source src="BlessingDraw_Animation.mp4" type="video/mp4">
+                    您的瀏覽器不支援播放此影片。
+                </video>
+
+                <!-- 精確百分比定位的互動按鈕，疊加於最上層 -->
+                <button class="draw-btn" id="draw-btn" aria-label="請賜籤"></button>
+            </div>
+        </section>
+
+        <!-- 2. 求籤結果畫面 -->
+        <section class="screen" id="screen-result">
+            <div class="image-wrapper">
+                <!-- 動態背景影片：循環播放、靜音、適應螢幕，並以靜態圖作為 poster 與 fallback -->
+                <video class="bg-img bg-video" id="result-bg-video" loop muted playsinline poster="BlessingDrawResult.png">
+                    <source src="BlessingDrawResult_Animation.mp4" type="video/mp4">
+                    <img src="BlessingDrawResult.png" alt="求籤結果背景" class="bg-img" id="result-bg-img">
+                </video>
+                
+                <!-- 牌匾內祝福語展示區 -->
+                <div class="blessing-board" id="blessing-board">
+                    <div class="blessing-content-wrapper">
+                        <!-- 直書祝福語本文：由右至左、由上至下自動換行，無籤號標題與落款 -->
+                        <div class="blessing-text" id="blessing-text-content">
+                            老和尚祝福你們，要想有智慧、福德、無量壽，這是果喔！因從哪裡來呢？「智慧福德無量壽，悉從精進法中來」，你不精進，這些果就沒有。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 回到首頁/再次求籤按鈕 -->
+                <button class="restart-btn" id="restart-btn">
+                    <span class="restart-btn-icon">🙏</span>
+                    <span class="restart-btn-text">再次求籤</span>
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 載入祝福語資料與主控邏輯 -->
+    <script src="blessings.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
