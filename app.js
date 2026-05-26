@@ -70,10 +70,10 @@ document.addEventListener("DOMContentLoaded", () => {
             // 清除先前的字數調節 class
             blockContent3.classList.remove("long-text", "extra-long-text", "extra-extra-long-text");
             
-            // 根據字數長短，自動調節字級大小以防破版 (四層級字數硬判定邏輯，精確至極長篇幅)
-            if (currentBlessing.length > 75) {
+            // 根據字數長短，自動調節字級大小以防破版 (優化後的四層級判定邏輯，精準解決 54/55 字及超長句破版問題)
+            if (currentBlessing.length > 70) {
                 blockContent3.classList.add("extra-extra-long-text");
-            } else if (currentBlessing.length > 55) {
+            } else if (currentBlessing.length > 50) {
                 blockContent3.classList.add("extra-long-text");
             } else if (currentBlessing.length > 35) {
                 blockContent3.classList.add("long-text");
