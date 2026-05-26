@@ -301,12 +301,12 @@ body, html {
     left: 14%;
     top: 32.5%;   /* 往上微移 1%，爭取更多垂直空間 */
     width: 72%;
-    height: 48.0%; /* 高度從 46.0% 進一步拉大至 48.0% 的物理極限，使排版空間達到最完美擴展 */
+    height: 54.0%; /* 移除按鈕後，高度從 48.0% 大幅拉長至 54.0%，實現極致大氣的縱向版面 */
     z-index: 10;
     display: flex;
     justify-content: center; /* 水平方向置中 (在直排中，這代表列與列整體居中) */
     align-items: center;     /* 垂直方向置中 (文字在垂直列中居中) */
-    padding: 0.5% 4%;        /* 上下 padding 壓縮至 0.5%，最大化直書垂直排版行長，多空出整整一個字的長度 */
+    padding: 0.5% 5%;        /* 微增左右內縮 padding 保持最佳垂直居中對稱感 */
 }
 
 /* 直排內容共用樣式 (移除 flexbox 宣告，使其回歸純粹的直排文本流，防止 inline 標籤如 strong 被提升為 Flex Item 導致字元橫向平排) */
@@ -356,7 +356,7 @@ body, html {
 
 /* 區塊 3 字體大小 (長篇祝福語) */
 #block-content-3 {
-    font-size: 7.2cqw;   /* 預設短句字體 (<=35字)，上調至 7.2cqw，震撼大氣 */
+    font-size: 7.5cqw;   /* 預設短句字體 (<=35字)，大幅上調至 7.5cqw，極致大氣 */
     font-weight: 600;
     line-height: 1.55;   /* 緊湊行高，使直書行與行間結構更沉穩 */
     letter-spacing: 0.12em;
@@ -369,22 +369,22 @@ body, html {
     height: 100%;
 }
 
-/* 針對中等字數的區塊 3 祝福語做字型微調 (35字 ~ 55字) */
+/* 針對中等字數的區塊 3 祝福語做字型微調 (35字 ~ 48字) */
 #block-content-3.long-text {
-    font-size: 6.0cqw;   /* 大幅上調至 6.0cqw，充滿飽滿感 */
+    font-size: 6.5cqw;   /* 大幅上調至 6.5cqw，充滿飽滿感 */
     line-height: 1.5;    /* 適度緊湊行距 */
 }
 
-/* 針對中長字數的區塊 3 祝福語做字型微調 (>55字 且 <=75字) */
+/* 針對中長字數的區塊 3 祝福語做字型微調 (48字 ~ 65字) */
 #block-content-3.extra-long-text {
-    font-size: 5.0cqw;   /* 大幅上調至 5.0cqw，保證長篇在直排下完美呈現 */
+    font-size: 5.5cqw;   /* 根據實測調優至 5.5cqw，保證長篇在直排下更加清晰尊貴 */
     line-height: 1.45;
 }
 
-/* 針對極限超長字數的區塊 3 祝福語做字型微調 (>75字，例如 98 字極限長句) */
+/* 針對極限超長字數的區塊 3 祝福語做字型微調 (>65字，例如 98 字極限長句) */
 #block-content-3.extra-extra-long-text {
-    font-size: 4.2cqw;   /* 降為極致大氣且安全的 4.2cqw，確保 98 字極限長文在手機與電腦上絕不溢出 */
-    line-height: 1.4;    /* 緊湊行距，使超長篇幅在直排 8~9 列下也顯得蒼勁密實、完美對稱 */
+    font-size: 4.8cqw;   /* 根據實測調優至 4.8cqw，確保極限長文在手機與電腦上皆極致震撼，且絕不溢出 */
+    line-height: 1.4;    /* 緊湊行距，使超長篇幅在直排下顯得蒼勁密實、完美對稱 */
 }
 
 /* 區塊 3 內部的 Markdown 粗體樣式優化 (蒼勁重黑體) */
@@ -393,52 +393,4 @@ body, html {
     color: #000;         /* 更深邃的特黑古墨色，與常規文字的溫潤墨色形成大氣且沉穩的對比 */
 }
 
-/* 再求一籤按鈕 (紅底金邊，大氣尊貴) */
-.restart-btn {
-    position: absolute;
-    left: 20%;
-    top: 86.8%;
-    width: 60%;
-    height: 6.8%;
-    background: linear-gradient(135deg, var(--color-red-btn) 0%, #801010 100%);
-    border: 2px solid var(--color-gold-light);
-    border-radius: 50px;
-    color: #fff;
-    font-family: var(--font-classical);
-    font-size: 4.4cqw;
-    font-weight: 600;
-    letter-spacing: 0.25em;
-    cursor: pointer;
-    z-index: 20;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 
-        0 8px 20px var(--color-red-glow),
-        inset 0 0 10px rgba(255, 215, 0, 0.3);
-    transition: var(--transition-medium);
-}
 
-.restart-btn-icon {
-    font-size: 1.15rem;
-    transition: transform 0.3s ease;
-}
-
-.restart-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 
-        0 12px 25px rgba(166, 28, 28, 0.7),
-        0 0 15px rgba(255, 215, 0, 0.4),
-        inset 0 0 15px rgba(255, 215, 0, 0.5);
-    background: linear-gradient(135deg, #be2424 0%, #951414 100%);
-}
-
-.restart-btn:hover .restart-btn-icon {
-    transform: scale(1.2) rotate(-8deg);
-}
-
-.restart-btn:active {
-    transform: translateY(1px);
-    box-shadow: 0 4px 10px var(--color-red-glow);
-}

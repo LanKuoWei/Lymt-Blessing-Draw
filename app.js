@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const screenResult = document.getElementById("screen-result");
     
     const drawBtn = document.getElementById("draw-btn");
-    const restartBtn = document.getElementById("restart-btn");
     
     const drawVideo = document.getElementById("draw-video");
     const resultBgVideo = document.getElementById("result-bg-video");
@@ -70,10 +69,10 @@ document.addEventListener("DOMContentLoaded", () => {
             // 清除先前的字數調節 class
             blockContent3.classList.remove("long-text", "extra-long-text", "extra-extra-long-text");
             
-            // 根據字數長短，自動調節字級大小以防破版 (優化後的四層級判定邏輯，精準解決 54/55 字及超長句破版問題)
-            if (currentBlessing.length > 53) {
+            // 根據字數長短，自動調節字級大小以防破版 (無按鈕新版：大幅度提升高度至 54.0% 後的極致大氣四層級判定)
+            if (currentBlessing.length > 65) {
                 blockContent3.classList.add("extra-extra-long-text");
-            } else if (currentBlessing.length > 45) {
+            } else if (currentBlessing.length > 48) {
                 blockContent3.classList.add("extra-long-text");
             } else if (currentBlessing.length > 35) {
                 blockContent3.classList.add("long-text");
@@ -140,31 +139,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // 重設狀態，回到首頁
-    function resetToHome() {
-        if (drawTimeout) clearTimeout(drawTimeout);
-        resultShown = false;
-
-        // 隱藏與停止影片播放
-        drawVideo.pause();
-        drawVideo.currentTime = 0;
-        drawVideo.classList.remove("active");
-        
-        if (resultBgVideo) {
-            resultBgVideo.pause();
-            resultBgVideo.currentTime = 0;
-        }
-
-        // 切換畫面：結果頁 -> 首頁
-        screenResult.classList.remove("active");
-        screenHome.classList.add("active");
-    }
-
     // --------------------------------------------------
     // 事件監聽繫結
     // --------------------------------------------------
     drawBtn.addEventListener("click", startDraw);
-    restartBtn.addEventListener("click", resetToHome);
     
     // --------------------------------------------------
     // 基本防護：阻斷右鍵選單、複製事件與圖片拖曳
