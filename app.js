@@ -71,9 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
             blockContent3.classList.remove("long-text", "extra-long-text", "extra-extra-long-text");
             
             // 根據字數長短，自動調節字級大小以防破版 (優化後的四層級判定邏輯，精準解決 54/55 字及超長句破版問題)
-            if (currentBlessing.length > 70) {
+            if (currentBlessing.length > 53) {
                 blockContent3.classList.add("extra-extra-long-text");
-            } else if (currentBlessing.length > 50) {
+            } else if (currentBlessing.length > 45) {
                 blockContent3.classList.add("extra-long-text");
             } else if (currentBlessing.length > 35) {
                 blockContent3.classList.add("long-text");
