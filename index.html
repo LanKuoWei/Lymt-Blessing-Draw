@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>法之光・心相應 ｜ 祝福語求籤</title>
-    
+    <title>法之光・心相應 ｜ 請賜籤</title>
+
     <!-- 載入 Google Fonts 思源宋體 Noto Serif TC 以及區塊 1 與 2 的字體子集 (Zhi Mang Xing 行草、Yuji Mai 流暢行書、Yuji Syuku 端莊楷書) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;900&family=Zhi+Mang+Xing&family=Yuji+Mai&family=Yuji+Syuku&text=%E4%BF%A1%E9%A1%98%E8%A1%8C%E5%B8%83%E6%96%BD%E6%8C%81%E6%88%92%E5%BF%8D%E8%BE%B1%E7%B2%BE%E9%80%B2%E7%A6%AA%E5%AE%9A%E8%88%AC%E8%8B%A5&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;900&family=Zhi+Mang+Xing&family=Yuji+Mai&family=Yuji+Syuku&text=%E4%BF%A1%E9%A1%98%E8%A1%8C%E5%B8%83%E6%96%BD%E6%8C%81%E6%88%92%E5%BF%8D%E8%BE%B1%E7%B2%BE%E9%80%B2%E7%A6%AA%E5%AE%9A%E8%88%AC%E8%8B%A5&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css?v=202605271905">
 </head>
+
 <body>
 
     <!-- 禪意深色背景與金色星光粒子效果 (PC端外圍) -->
@@ -32,7 +36,7 @@
                     <source srcset="BlessingDrawPage.webp?v=202605271905" type="image/webp">
                     <img src="BlessingDrawPage.png?v=202605271905" alt="與佛相應求籤首頁" class="bg-img" id="bg-base-img">
                 </picture>
-                
+
                 <!-- 原地層疊的求籤動畫影片 (預載，預設 opacity: 0 隱藏) -->
                 <video class="animation-video" id="draw-video" preload="auto" playsinline muted>
                     <source src="BlessingDraw_Animation.mp4" type="video/mp4">
@@ -48,11 +52,12 @@
         <section class="screen" id="screen-result">
             <div class="image-wrapper">
                 <!-- 動態背景影片：循環播放、靜音、適應螢幕，並以靜態圖作為 poster 與 fallback -->
-                <video class="bg-img bg-video" id="result-bg-video" loop muted playsinline poster="BlessingDrawResult_1.png?v=202605271905">
+                <video class="bg-img bg-video" id="result-bg-video" loop muted playsinline
+                    poster="BlessingDrawResult_1.png?v=202605271905">
                     <source src="BlessingDrawResult_Animation_1.mp4?v=202605271905" type="video/mp4">
                     <img src="BlessingDrawResult_1.png?v=202605271905" alt="求籤結果背景" class="bg-img" id="result-bg-img">
                 </video>
-                
+
                 <!-- 牌匾內區塊 1 展示區 (淨寶三資糧) -->
                 <div class="blessing-block block-1" id="blessing-block-1">
                     <div class="block-content" id="block-content-1">信</div>
@@ -78,4 +83,5 @@
     <script src="blessings.js?v=202605271905" charset="UTF-8"></script>
     <script src="app.js?v=202605271905" charset="UTF-8"></script>
 </body>
+
 </html>
