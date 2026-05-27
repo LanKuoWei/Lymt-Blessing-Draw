@@ -27,8 +27,11 @@
         <!-- 1. 首頁與求籤動畫畫面 (同一容器層疊，以實現極致無縫原地淡入) -->
         <section class="screen active" id="screen-home">
             <div class="image-wrapper">
-                <!-- 首頁底圖 -->
-                <img src="BlessingDrawPage.png" alt="與佛相應求籤首頁" class="bg-img" id="bg-base-img">
+                <!-- 首頁底圖 (高相容Picture雙備援：現代手機加載0.49MB WebP；極老舊手機自動加載1.06MB優化PNG) -->
+                <picture class="bg-img">
+                    <source srcset="BlessingDrawPage.webp?v=202605270750" type="image/webp">
+                    <img src="BlessingDrawPage.png?v=202605270750" alt="與佛相應求籤首頁" class="bg-img" id="bg-base-img">
+                </picture>
                 
                 <!-- 原地層疊的求籤動畫影片 (預載，預設 opacity: 0 隱藏) -->
                 <video class="animation-video" id="draw-video" preload="auto" playsinline muted>
