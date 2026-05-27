@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>法之光・心相應 ｜ 祝福語求籤</title>
     
-    <!-- 載入 Google Fonts 思源宋體 Noto Serif TC -->
+    <!-- 載入 Google Fonts 思源宋體 Noto Serif TC 以及區塊 1 與 2 的字體子集 (Zhi Mang Xing 行草、Yuji Mai 流暢日文行書) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;900&family=Zhi+Mang+Xing&family=Yuji+Mai&text=%E4%BF%A1%E9%A1%98%E8%A1%8C%E5%B8%83%E6%96%BD%E6%8C%81%E6%88%92%E5%BF%8D%E8%BE%B1%E7%B2%BE%E9%80%B2%E7%A6%AA%E5%AE%9A%E8%88%AC%E8%8B%A5&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css?v=202605270750">
+    <link rel="stylesheet" href="style.css?v=202605270947">
 </head>
 <body>
 
@@ -29,8 +29,8 @@
             <div class="image-wrapper">
                 <!-- 首頁底圖 (高相容Picture雙備援：現代手機加載0.49MB WebP；極老舊手機自動加載1.06MB優化PNG) -->
                 <picture class="bg-img">
-                    <source srcset="BlessingDrawPage.webp?v=202605270750" type="image/webp">
-                    <img src="BlessingDrawPage.png?v=202605270750" alt="與佛相應求籤首頁" class="bg-img" id="bg-base-img">
+                    <source srcset="BlessingDrawPage.webp?v=202605270947" type="image/webp">
+                    <img src="BlessingDrawPage.png?v=202605270947" alt="與佛相應求籤首頁" class="bg-img" id="bg-base-img">
                 </picture>
                 
                 <!-- 原地層疊的求籤動畫影片 (預載，預設 opacity: 0 隱藏) -->
@@ -48,9 +48,9 @@
         <section class="screen" id="screen-result">
             <div class="image-wrapper">
                 <!-- 動態背景影片：循環播放、靜音、適應螢幕，並以靜態圖作為 poster 與 fallback -->
-                <video class="bg-img bg-video" id="result-bg-video" loop muted playsinline poster="BlessingDrawResult_1.png?v=202605270750">
-                    <source src="BlessingDrawResult_Animation_1.mp4?v=202605270750" type="video/mp4">
-                    <img src="BlessingDrawResult_1.png?v=202605270750" alt="求籤結果背景" class="bg-img" id="result-bg-img">
+                <video class="bg-img bg-video" id="result-bg-video" loop muted playsinline poster="BlessingDrawResult_1.png?v=202605270947">
+                    <source src="BlessingDrawResult_Animation_1.mp4?v=202605270947" type="video/mp4">
+                    <img src="BlessingDrawResult_1.png?v=202605270947" alt="求籤結果背景" class="bg-img" id="result-bg-img">
                 </video>
                 
                 <!-- 牌匾內區塊 1 展示區 (淨寶三資糧) -->
@@ -75,7 +75,7 @@
     </main>
 
     <!-- 載入祝福語資料與主控邏輯 (顯式指定 UTF-8 編碼，防止 Windows 本地端載入亂碼) -->
-    <script src="blessings.js?v=202605270750" charset="UTF-8"></script>
-    <script src="app.js?v=202605270750" charset="UTF-8"></script>
+    <script src="blessings.js?v=202605270947" charset="UTF-8"></script>
+    <script src="app.js?v=202605270947" charset="UTF-8"></script>
 </body>
 </html>

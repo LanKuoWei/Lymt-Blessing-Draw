@@ -337,21 +337,25 @@ body, html {
     transform: translateY(0);
 }
 
-/* 區塊 1 字體大小 (單字如「信」) */
+/* 區塊 1 字體與外觀 (單字如「信」) */
 #block-content-1 {
     font-size: 11.0cqw; /* 從 14.5cqw 下調至安全且大氣的 11.0cqw，極致防止手機端與外框重疊 */
     font-weight: 900;
     letter-spacing: 0;
     text-align: center;
+    color: #5a2d1e;     /* 溫潤大氣的焦香紅咖啡色 (類似硃砂烙印感)，完美契合木板底色 */
+    font-family: "Zhi Mang Xing", "Yuji Mai", "Kaiti TC", "DFKai-SB", "標楷體", serif;
 }
 
-/* 區塊 2 字體大小 (雙字如「布施」，直排) */
+/* 區塊 2 字體與外觀 (雙字如「布施」，直排) */
 #block-content-2 {
     font-size: 8.5cqw;  /* 從 11.5cqw 下調至安全的 8.5cqw，確保手機端雙字在一列直排排完，絕不分裂成兩列 */
     font-weight: 900;
     letter-spacing: 0.05em;
     line-height: 1.1;   /* 緊湊行高，使直書雙字銜接完美 */
     text-align: center;
+    color: #5a2d1e;     /* 溫潤大氣的焦香紅咖啡色 (類似硃砂烙印感)，完美契合木板底色 */
+    font-family: "Zhi Mang Xing", "Yuji Mai", "Kaiti TC", "DFKai-SB", "標楷體", serif;
 }
 
 /* 區塊 3 字體大小 (長篇祝福語) */
