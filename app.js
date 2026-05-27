@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .replace(/>/g, "&gt;")
             .replace(/"/g, "&quot;")
             .replace(/'/g, "&#039;");
-        return safeText.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+        return safeText.replace(/\*\*(.*?)\*\*/g, "$1");
     }
 
     // 執行隨機抽取法語與招財、淨寶字組
