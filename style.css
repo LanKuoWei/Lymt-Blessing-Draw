@@ -370,7 +370,7 @@ body, html {
     line-height: 1.1;   /* 緊湊行高，使直書雙字銜接完美 */
     text-align: center;
     color: #5a2d1e;     /* 溫潤大氣的焦香紅咖啡色 (類似硃砂烙印感)，完美契合木板底色 */
-    font-family: "MoeMoeBrushSubset", "MoeMoeBrush", "莫大毛筆字型", "莫大毛筆字體", "Zhi Mang Xing", "Yuji Mai", "Kaiti TC", "DFKai-SB", "標楷體", serif;
+    font-family: "Yuji Syuku", "MoeMoeBrushSubset", "MoeMoeBrush", "莫大毛筆字型", "莫大毛筆字體", "Zhi Mang Xing", "Yuji Mai", "Kaiti TC", "DFKai-SB", "標楷體", serif;
 }
 
 /* 區塊 3 字體大小 (長篇祝福語) */
