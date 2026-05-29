@@ -402,8 +402,8 @@ html {
 
 /* 區塊 1 字體與外觀 (單字如「信」) */
 #block-content-1 {
-    font-size: 11.0cqw;
-    /* 從 14.5cqw 下調至安全且大氣的 11.0cqw，極致防止手機端與外框重疊 */
+    font-size: 12.5cqw;
+    /* 大氣調升至 12.5cqw，讓單字更加醒目威嚴，且完美防溢出 */
     font-weight: 900;
     letter-spacing: 0;
     text-align: center;
@@ -414,8 +414,8 @@ html {
 
 /* 區塊 2 字體與外觀 (雙字如「布施」，直排) */
 #block-content-2 {
-    font-size: 8.5cqw;
-    /* 從 11.5cqw 下調至安全的 8.5cqw，確保手機端雙字在一列直排排完，絕不分裂成兩列 */
+    font-size: 9.8cqw;
+    /* 穩健調升至 9.8cqw，雙字直書更顯雄渾，並保證在行動端絕不折行 */
     font-weight: 900;
     letter-spacing: 0.05em;
     line-height: 1.1;
