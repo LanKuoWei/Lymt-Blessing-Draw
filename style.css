@@ -1,4 +1,5 @@
 @import url('https://cdn.jsdelivr.net/npm/@fontsource/lxgw-wenkai@latest/700.css');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/iansui@latest/400.css');
 
 @font-face {
     font-family: 'MasaFontSubset';
@@ -7,6 +8,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'MoeMoeBrushSubset';
     src: url('data:font/woff2;charset=utf-8;base64,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') format('woff2');
@@ -23,13 +25,14 @@
     --color-gold-light: #ffd700;
     --color-gold-dark: #b8860b;
     --color-gold-glow: rgba(255, 215, 0, 0.4);
-    --color-text-dark: #2c1a0c; /* 溫潤的古墨色 */
+    --color-text-dark: #2c1a0c;
+    /* 溫潤的古墨色 */
     --color-red-btn: #a61c1c;
     --color-red-glow: rgba(166, 28, 28, 0.5);
-    
+
     --font-classical: "Noto Serif TC", "Songti TC", "MingLiU", serif;
     --font-modern: "Outfit", "Inter", sans-serif;
-    
+
     --transition-slow: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-medium: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     --transition-fast: all 0.15s ease;
@@ -43,7 +46,7 @@
     padding: 0;
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
-    
+
     /* 基本防護：防止使用者選取網頁任何文字 */
     user-select: none;
     -webkit-user-select: none;
@@ -51,7 +54,8 @@
     -ms-user-select: none;
 }
 
-body, html {
+body,
+html {
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -82,11 +86,11 @@ body, html {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: 
-        radial-gradient(1px 1px at 20px 30px, #ffffff, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 40px 70px, rgba(255, 215, 0, 0.7), rgba(0,0,0,0)),
-        radial-gradient(1.5px 1.5px at 90px 40px, #ffffff, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 150px 120px, rgba(255, 215, 0, 0.5), rgba(0,0,0,0));
+    background-image:
+        radial-gradient(1px 1px at 20px 30px, #ffffff, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 40px 70px, rgba(255, 215, 0, 0.7), rgba(0, 0, 0, 0)),
+        radial-gradient(1.5px 1.5px at 90px 40px, #ffffff, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 150px 120px, rgba(255, 215, 0, 0.5), rgba(0, 0, 0, 0));
     background-repeat: repeat;
     background-size: 250px 250px;
     opacity: 0.35;
@@ -94,8 +98,13 @@ body, html {
 }
 
 @keyframes starMove {
-    from { background-position: 0 0; }
-    to { background-position: 250px 500px; }
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 250px 500px;
+    }
 }
 
 /* 柔和的佛光球體 */
@@ -106,6 +115,7 @@ body, html {
     opacity: 0.15;
     mix-blend-mode: screen;
 }
+
 .orb-1 {
     width: 500px;
     height: 500px;
@@ -114,6 +124,7 @@ body, html {
     left: -100px;
     animation: floatOrb 18s ease-in-out infinite alternate;
 }
+
 .orb-2 {
     width: 600px;
     height: 600px;
@@ -124,8 +135,13 @@ body, html {
 }
 
 @keyframes floatOrb {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(50px, 30px) scale(1.1); }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(50px, 30px) scale(1.1);
+    }
 }
 
 /* --------------------------------------------------
@@ -137,20 +153,20 @@ body, html {
     overflow: hidden;
     background: #000;
     margin: auto;
-    
+
     /* 核心：將其設為 Container Queries 的容器 */
     container-type: inline-size;
-    
+
     /* 電腦端自適應：高度為 95vh，寬度按比例自動計算 */
     height: 95vh;
     width: calc(95vh * 1817 / 3231);
-    
+
     /* 行動端與極窄螢幕鎖定：當寬度超出螢幕寬度時，轉以寬度自適應填滿，高度按比例縮放 */
     max-width: 100vw;
     max-height: calc(100vw * 3231 / 1817);
-    
+
     border-radius: 20px;
-    box-shadow: 
+    box-shadow:
         0 20px 50px rgba(0, 0, 0, 0.65),
         0 0 0 1px rgba(255, 255, 255, 0.08),
         0 0 40px rgba(255, 215, 0, 0.05);
@@ -158,12 +174,14 @@ body, html {
 }
 
 /* 手機窄螢幕 (或比例更窄的行動端) 填滿適應 */
-@media (max-width: 480px), (max-aspect-ratio: 1817/3231) {
+@media (max-width: 480px),
+(max-aspect-ratio: 1817/3231) {
     .app-container {
         height: 100vh;
         width: calc(100vh * 1817 / 3231);
         max-height: calc(100vw * 3231 / 1817);
-        border-radius: 0; /* 手機端填滿時取消圓角，達到沉浸式滿版 */
+        border-radius: 0;
+        /* 手機端填滿時取消圓角，達到沉浸式滿版 */
         box-shadow: none;
     }
 }
@@ -251,9 +269,23 @@ body, html {
 }
 
 @keyframes goldPulse {
-    0% { transform: scale(1.0); opacity: 0.3; box-shadow: 0 0 5px rgba(255, 215, 0, 0.1); }
-    50% { transform: scale(1.02); opacity: 0.9; box-shadow: 0 0 25px rgba(255, 215, 0, 0.5); }
-    100% { transform: scale(1.0); opacity: 0.3; box-shadow: 0 0 5px rgba(255, 215, 0, 0.1); }
+    0% {
+        transform: scale(1.0);
+        opacity: 0.3;
+        box-shadow: 0 0 5px rgba(255, 215, 0, 0.1);
+    }
+
+    50% {
+        transform: scale(1.02);
+        opacity: 0.9;
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+    }
+
+    100% {
+        transform: scale(1.0);
+        opacity: 0.3;
+        box-shadow: 0 0 5px rgba(255, 215, 0, 0.1);
+    }
 }
 
 /* 按鍵點擊的反饋微縮放 */
@@ -289,10 +321,14 @@ body, html {
 /* 區塊 1 定位 (淨寶三資糧的左邊) */
 .blessing-block.block-1 {
     position: absolute;
-    left: 21.0%;  /* 向左平移 3.5%，完美對齊背景圖中標註的 1 區塊正中心 */
-    top: 11.5%;   /* 往上移動，使大字中心完美對齊右方「淨寶三資糧」的中間點 */
-    width: 14%;   /* 加寬容器，防止大字體折行 */
-    height: 15%;  /* 微調高度，與 top 配合達到極致的垂直居中對稱 */
+    left: 21.0%;
+    /* 向左平移 3.5%，完美對齊背景圖中標註的 1 區塊正中心 */
+    top: 11.5%;
+    /* 往上移動，使大字中心完美對齊右方「淨寶三資糧」的中間點 */
+    width: 14%;
+    /* 加寬容器，防止大字體折行 */
+    height: 15%;
+    /* 微調高度，與 top 配合達到極致的垂直居中對稱 */
     z-index: 10;
     display: flex;
     justify-content: center;
@@ -302,10 +338,14 @@ body, html {
 /* 區塊 2 定位 (招財六度行的左邊) */
 .blessing-block.block-2 {
     position: absolute;
-    left: 49.0%;  /* 向左平移 3.5%，完美對齊背景圖中標註的 2 區塊正中心 */
-    top: 11.5%;   /* 往上移動，使大字中心完美對齊右方「招財六度行」的中間點 */
-    width: 14%;   /* 加寬容器，防止大字體折行 */
-    height: 15%;  /* 微調高度，與 top 配合達到極致的垂直居中對稱 */
+    left: 49.0%;
+    /* 向左平移 3.5%，完美對齊背景圖中標註的 2 區塊正中心 */
+    top: 11.5%;
+    /* 往上移動，使大字中心完美對齊右方「招財六度行」的中間點 */
+    width: 14%;
+    /* 加寬容器，防止大字體折行 */
+    height: 15%;
+    /* 微調高度，與 top 配合達到極致的垂直居中對稱 */
     z-index: 10;
     display: flex;
     justify-content: center;
@@ -316,14 +356,19 @@ body, html {
 .blessing-block.block-3 {
     position: absolute;
     left: 14%;
-    top: 32.5%;   /* 往上微移 1%，爭取更多垂直空間 */
+    top: 32.5%;
+    /* 往上微移 1%，爭取更多垂直空間 */
     width: 72%;
-    height: 54.0%; /* 移除按鈕後，高度從 48.0% 大幅拉長至 54.0%，實現極致大氣的縱向版面 */
+    height: 54.0%;
+    /* 移除按鈕後，高度從 48.0% 大幅拉長至 54.0%，實現極致大氣的縱向版面 */
     z-index: 10;
     display: flex;
-    justify-content: center; /* 水平方向置中 (在直排中，這代表列與列整體居中) */
-    align-items: center;     /* 垂直方向置中 (文字在垂直列中居中) */
-    padding: 0.5% 5%;        /* 微增左右內縮 padding 保持最佳垂直居中對稱感 */
+    justify-content: center;
+    /* 水平方向置中 (在直排中，這代表列與列整體居中) */
+    align-items: center;
+    /* 垂直方向置中 (文字在垂直列中居中) */
+    padding: 0.5% 5%;
+    /* 微增左右內縮 padding 保持最佳垂直居中對稱感 */
 }
 
 /* 直排內容共用樣式 (移除 flexbox 宣告，使其回歸純粹的直排文本流，防止 inline 標籤如 strong 被提升為 Flex Item 導致字元橫向平排) */
@@ -346,7 +391,8 @@ body, html {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    white-space: nowrap; /* 強制不折行，配合適度字體大小，百分之百防止直排字體因高度限制而換列 */
+    white-space: nowrap;
+    /* 強制不折行，配合適度字體大小，百分之百防止直排字體因高度限制而換列 */
 }
 
 .screen.active .blessing-block .block-content {
@@ -356,35 +402,43 @@ body, html {
 
 /* 區塊 1 字體與外觀 (單字如「信」) */
 #block-content-1 {
-    font-size: 11.0cqw; /* 從 14.5cqw 下調至安全且大氣的 11.0cqw，極致防止手機端與外框重疊 */
+    font-size: 11.0cqw;
+    /* 從 14.5cqw 下調至安全且大氣的 11.0cqw，極致防止手機端與外框重疊 */
     font-weight: 900;
     letter-spacing: 0;
     text-align: center;
-    color: #5a2d1e;     /* 溫潤大氣的焦香紅咖啡色 (類似硃砂烙印感)，完美契合木板底色 */
+    color: #5a2d1e;
+    /* 溫潤大氣的焦香紅咖啡色 (類似硃砂烙印感)，完美契合木板底色 */
     font-family: "Yuji Syuku", "MasaFontSubset", "MasaFont", "正風毛筆字型", "正風毛筆字體", "Zhi Mang Xing", "Yuji Mai", "Kaiti TC", "DFKai-SB", "標楷體", serif;
 }
 
 /* 區塊 2 字體與外觀 (雙字如「布施」，直排) */
 #block-content-2 {
-    font-size: 8.5cqw;  /* 從 11.5cqw 下調至安全的 8.5cqw，確保手機端雙字在一列直排排完，絕不分裂成兩列 */
+    font-size: 8.5cqw;
+    /* 從 11.5cqw 下調至安全的 8.5cqw，確保手機端雙字在一列直排排完，絕不分裂成兩列 */
     font-weight: 900;
     letter-spacing: 0.05em;
-    line-height: 1.1;   /* 緊湊行高，使直書雙字銜接完美 */
+    line-height: 1.1;
+    /* 緊湊行高，使直書雙字銜接完美 */
     text-align: center;
-    color: #5a2d1e;     /* 溫潤大氣的焦香紅咖啡色 (類似硃砂烙印感)，完美契合木板底色 */
+    color: #5a2d1e;
+    /* 溫潤大氣的焦香紅咖啡色 (類似硃砂烙印感)，完美契合木板底色 */
     font-family: "Yuji Syuku", "MoeMoeBrushSubset", "MoeMoeBrush", "莫大毛筆字型", "莫大毛筆字體", "Zhi Mang Xing", "Yuji Mai", "Kaiti TC", "DFKai-SB", "標楷體", serif;
 }
 
 /* 區塊 3 字體大小 (長篇祝福語) */
 #block-content-3 {
-    font-family: "LXGW WenKai", "Kaiti TC", "DFKai-SB", "標楷體", "BiauKai", "KaiTi", serif;
-    font-size: 7.5cqw;   /* 預設短句字體 (<=35字)，大幅上調至 7.5cqw，極致大氣 */
-    font-weight: 700;
-    line-height: 1.55;   /* 緊湊行高，使直書行與行間結構更沉穩 */
+    font-family: "Iansui", "LXGW WenKai", "Kaiti TC", "DFKai-SB", "標楷體", "BiauKai", "KaiTi", serif;
+    font-size: 7.5cqw;
+    /* 預設短句字體 (<=35字)，大幅上調至 7.5cqw，極致大氣 */
+    font-weight: 600;
+    /* 芫荽體為精緻硬筆圓體，使用 600 (Regular) 字重可完美展現手寫流暢度，避免 700 產生毛邊 */
+    line-height: 1.55;
+    /* 緊湊行高，使直書行與行間結構更沉穩 */
     letter-spacing: 0.12em;
     text-align: justify;
     text-justify: inter-ideographic;
-    
+
     /* 核心：寬度設為 fit-content，讓整個直排文字方塊在 Flex 父容器中完美實現水平與垂直雙置中 */
     width: fit-content;
     max-width: 100%;
@@ -393,26 +447,30 @@ body, html {
 
 /* 針對中等字數的區塊 3 祝福語做字型微調 (35字 ~ 48字) */
 #block-content-3.long-text {
-    font-size: 6.5cqw;   /* 大幅上調至 6.5cqw，充滿飽滿感 */
-    line-height: 1.5;    /* 適度緊湊行距 */
+    font-size: 6.5cqw;
+    /* 大幅上調至 6.5cqw，充滿飽滿感 */
+    line-height: 1.5;
+    /* 適度緊湊行距 */
 }
 
 /* 針對中長字數的區塊 3 祝福語做字型微調 (48字 ~ 65字) */
 #block-content-3.extra-long-text {
-    font-size: 5.5cqw;   /* 根據實測調優至 5.5cqw，保證長篇在直排下更加清晰尊貴 */
+    font-size: 5.5cqw;
+    /* 根據實測調優至 5.5cqw，保證長篇在直排下更加清晰尊貴 */
     line-height: 1.45;
 }
 
 /* 針對極限超長字數的區塊 3 祝福語做字型微調 (>65字，例如 98 字極限長句) */
 #block-content-3.extra-extra-long-text {
-    font-size: 4.8cqw;   /* 根據實測調優至 4.8cqw，確保極限長文在手機與電腦上皆極致震撼，且絕不溢出 */
-    line-height: 1.4;    /* 緊湊行距，使超長篇幅在直排下顯得蒼勁密實、完美對稱 */
+    font-size: 4.8cqw;
+    /* 根據實測調優至 4.8cqw，確保極限長文在手機與電腦上皆極致震撼，且絕不溢出 */
+    line-height: 1.4;
+    /* 緊湊行距，使超長篇幅在直排下顯得蒼勁密實、完美對稱 */
 }
 
 /* 區塊 3 內部的 Markdown 粗體樣式優化 (蒼勁重黑體) */
 #block-content-3 strong {
     font-weight: 900;
-    color: #000;         /* 更深邃的特黑古墨色，與常規文字的溫潤墨色形成大氣且沉穩的對比 */
+    color: #000;
+    /* 更深邃的特黑古墨色，與常規文字的溫潤墨色形成大氣且沉穩的對比 */
 }
-
-
