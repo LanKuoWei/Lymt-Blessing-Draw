@@ -414,8 +414,8 @@ html {
 
 /* 區塊 2 字體與外觀 (雙字如「布施」，直排) */
 #block-content-2 {
-    font-size: 9.8cqw;
-    /* 穩健調升至 9.8cqw，雙字直書更顯雄渾，並保證在行動端絕不折行 */
+    font-size: 10.8cqw;
+    /* 再放大一階至 10.8cqw，字形磅礴大氣，完美匹配雙字在牌匾中的黃金視覺比 */
     font-weight: 900;
     letter-spacing: 0.05em;
     line-height: 1.1;
