@@ -375,6 +375,7 @@ body, html {
 
 /* 區塊 3 字體大小 (長篇祝福語) */
 #block-content-3 {
+    font-family: "Kaiti TC", "DFKai-SB", "標楷體", "BiauKai", "KaiTi", serif;
     font-size: 7.5cqw;   /* 預設短句字體 (<=35字)，大幅上調至 7.5cqw，極致大氣 */
     font-weight: 600;
     line-height: 1.55;   /* 緊湊行高，使直書行與行間結構更沉穩 */
